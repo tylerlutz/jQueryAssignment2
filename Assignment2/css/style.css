@@ -10,15 +10,22 @@ body{
 
 #gameBoard td {
     border: solid black 2px;
-    font-size: 3.0em;
+    overflow: auto;
 }
 
-#gameBoard td.x {
+#gameBoard td:before{
+	font-size: 6.0em;
+	line-height: 1;
+}
+
+#gameBoard td.x:before {
     content: "X";
     color: #e6cf8b;
+    margin: 0px;
+    padding: none;
 }
 
-#gameBoard td.o {
+#gameBoard td.o:before {
     content: "O";
     color: #22264b;
 }
@@ -35,8 +42,8 @@ body{
 
 #messageBox {
     width: 500px;
-    height: 250px;
-    margin-top: 65px;
+    height: 235px;
+    margin-top: 15px;
     background-color: black;
     border: solid black 2px;
     border-radius: 3px;
@@ -46,4 +53,8 @@ body{
 
 #messageBox p {
     margin: 10px;
+}
+
+#commentBox {
+	height: 200px;
 }
