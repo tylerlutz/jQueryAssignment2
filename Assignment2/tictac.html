@@ -3,8 +3,110 @@
 	<head>
 		<title>Tyler Lutz - jQuery TicTac Toe</title>
 
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <script>
+            $(function(){
+                
+                var player1Name;
+                var player2Name;
+                var player1Turn = 1;
+                var player2Turn = 1;
+                
+                var player = 1;
+                
+                document.getElementById("txtPlayer1").value = "";
+                document.getElementById("txtPlayer2").value = "";
+                
+                //Get the players names to be used in the message box
+                $("#btnPlayers").click(function() {
+                    var isEmpty = false;
+                    var errorMessage;
+                    
+                    //Get the names of the players
+                    player1Name = document.getElementById("txtPlayer1").value;
+                    player2Name = document.getElementById("txtPlayer2").value;
+                    
+                    if (player1Name == "") {
+                        isEmpty = true;
+                    } else if (player2Name == "") {
+                        isEmpty = true;
+                    }
+                    
+                    if(isEmpty){
+                        errorMessage = "Please enter the names for both players.";
+                        document.getElementById("message").innerHTML = errorMessage;
+                        player1Name = "";
+                        player2Name = "";
+                    }else{
+                        document.getElementById("message").innerHTML = player1Name + "'s turn!<br>This is turn #" + player1Turn + ".";
+                    }
+                });
+                
+                
+                        
+                
+            });
+            
+        </script>
+        
 	</head>
-	<body>
-			
+	<body style="background-color:#e8edf3">
+        
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </div>
+        </nav>
+
+		<div class="container">
+			<table id="gameBoard" class="col-lg-5">
+                <h1>jQuery TicTac Toe</h1>
+				<tr>
+					<td id="topLeft"></td>
+					<td id="topCenter"></td>
+                    <td id="topRight"></td>
+				</tr>
+                <tr>
+                    <td id="centerLeft"></td>
+                    <td id="center"></td>
+                    <td id="centerRight"></td>
+                </tr>
+                <tr>
+                    <td id="bottomLeft"></td>
+                    <td id="bottomCenter"></td>
+                    <td id="bottomRight"></td>
+                </tr>
+			</table>
+            <div class="col-sm-5" id="rightColumn">
+                <div class="form-group">
+                    <label>Player 1 Name:</label>
+                    <input type="text" id="txtPlayer1" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Player 2 Name:</label>
+                    <input type="text" id="txtPlayer2" class="form-control">
+                </div>
+                <button type="button" id="btnPlayers" class="btn btn-default">Enter Names</button>
+                <div id="messageBox"><p id="message"></p></div>
+            </div>
+		</div>
 	</body>
 </html>

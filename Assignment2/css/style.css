@@ -1,0 +1,36 @@
+body{
+    padding-top: 70px;
+}
+
+#gameBoard {
+    width: 500px;
+    height: 500px;
+    text-align: center
+}
+
+#gameBoard td {
+    border: solid black 2px;
+}
+
+#gameBoard td:hover{
+    background-color: #b56969;
+}
+
+#rightColumn {
+    margin-left: 60px;
+}
+
+#messageBox {
+    width: 500px;
+    height: 250px;
+    margin-top: 65px;
+    background-color: black;
+    border: solid black 2px;
+    border-radius: 3px;
+    color: chartreuse;
+    font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+}
+
+#messageBox p {
+    margin: 10px;
+}
