@@ -10,7 +10,20 @@ body{
 
 #gameBoard td {
     border: solid black 2px;
+    font-size: 3.0em;
 }
+
+#gameBoard td.x {
+    content: "X";
+    color: #e6cf8b;
+}
+
+#gameBoard td.o {
+    content: "O";
+    color: #22264b;
+}
+
+
 
 #gameBoard td:hover{
     background-color: #b56969;
