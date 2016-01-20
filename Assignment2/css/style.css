@@ -11,6 +11,8 @@ body{
 #gameBoard td {
     border: solid black 2px;
     overflow: auto;
+    width: 166.6px;
+    height: 166.7px;
 }
 
 #gameBoard td:before{
@@ -57,4 +59,9 @@ body{
 
 #commentBox {
 	height: 200px;
+}
+
+.question {
+	font-weight: bold;
+	width: 200px;
 }

@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Tyler Lutz - jQuery TicTac Toe</title>
+		
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		
+		<link href="css/datatable.css" rel="stylesheet" type="text/css">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 	crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- jQuery Datatables -->
+		<script  src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+			    $('#faqTable').DataTable();
+			});	
+		</script>
+
+	</head>
+	<body style="background-color:#e8edf3">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">jQuery TicTac Toe</a>
+            </div>
+            <ul class="nav navbar-nav">
+	          <li><a href="index.html">Welcome Page</a>
+              <li><a href="tictac.html">TicTac Toe</a></li>
+              <li class="active"><a  href="faq.html">FAQ</a></li>
+              <li><a href="register.html">Registration Form</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+         </nav>
+        
+        <div class="container">
+	        <table id="faqTable" class="display" cellspacing="0" width="100%">
+		        <thead>
+		            <tr>
+		                <th>Question</th>
+		                <th>Answer</th>
+		            </tr>
+		        </thead>
+		        <tfoot>
+		            <tr>
+		                <th>Question</th>
+		                <th>Answer</th>
+		            </tr>
+		        </tfoot>
+		        <tbody>
+		            <tr>
+		                <td class="question">How do I play the jQuery TicTac Toe game?</td>
+		                <td>First, you will need to enter the players names into the textboxes. If you attempt to enter just one players name
+			                and error will be displayed into the message box. After the names are entered, player 1 may select a box and then player 2
+			                until the game is over.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">How do I know who wins?</td>
+		                <td>The message box displays everything you need to know including the current player, and any errors that may occur. If
+			                the game has been won, the message box will display the player who has won.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">What if there is an error?</td>
+		                <td>If an error occurs a message will be presented to you in the message box. If this problem still occurs, then let us know
+			                using the Contact page. 
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">How do I register?</td>
+		                <td>To register, click on the Registration Form in the navigation bar. Fill out the information and click on submit.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">What information is needed to register?</td>
+		                <td>We will need your first name, last name, email address, and then you create a password to use with the site. </td>
+		            </tr>
+		            <tr>
+		                <td class="question">Do I have to give my email address?</td>
+		                <td>Yes, you email address is going to used as your username for the site. Also we will need your email to send you password
+			                resets in case you forget your password.
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">Will my email be used for spam?</td>
+		                <td>Absolutely not. We only use your email address as your username and to send you password reset links.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">If I have a question who can I contact?</td>
+		                <td>We are always looking into ways to improve our site. If you have any questions or concerns, send it to use
+			                trough the Contact Form.
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">How long does it take you to get back to me?</td>
+		                <td>It takes us about 2-3 business days to get back to you. If it is longer then that, please send us another message
+			                in case we did not get it.
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">How was this game created?</td>
+		                <td>This game was created using simple HTML, CSS, Javascript, and jQuery. Code for this game can be found on Github.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">What if I forget my password?</td>
+		                <td>Forget your password? Go to the login page and click on the password reset button.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">What is the process of reseting my password?</td>
+		                <td>Click on the password reset button on the login page and then enter your email address. Click on the reset link in the 
+			                email you received, and then enter in your new password.
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">I did not get a password reset link.</td>
+		                <td>If you did not get a password reset link, check you email's spam box.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">Will there be a leaderboard?</td>
+		                <td>Eventually we will add a leaderboard. But until then, enjoy our great game!</td>
+		            </tr>
+		            <tr>
+		                <td class="question">What features will be added in the future?</td>
+		                <td>A leaderboard will be coming very soon, eventually we would like to have online competitions.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">I have a feature request.</td>
+		                <td>If you have a feature request let us know! Use the Contact Form to send us a message.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">Any job openings?</td>
+		                <td>We are always looking for great people to be added to our team. Let us know you are interested
+			                using the Contact Form and we can get back to you. 
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">Are there other ways to contact you?</td>
+		                <td>Currently there is only one way to contact us, and that is through the contact form. Other forms of contact 
+			                could potentially be offered in the future.
+		                </td>
+		            </tr>
+		            <tr>
+		                <td class="question">How was this FAQ page made?</td>
+		                <td>This page was created using the jQuery Data Tables plugin.</td>
+		            </tr>
+		            <tr>
+		                <td class="question">How is my information validated?</td>
+		                <td>All information enter into our forms are validated using the jQuery validation plugin.</td>
+		            </tr>
+		        </tbody>
+		    </table>
+        </div>  
+	</body>
+</html>

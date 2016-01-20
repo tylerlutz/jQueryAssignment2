@@ -61,7 +61,7 @@
                         var gamePiece = assignGamePieceToPlayer(player);
                         changeGameBoard(td, gamePiece);
                         if(checkIfWinner(table,gamePiece)){
-                            if(player = 1){
+                            if(player == 1){
                                 document.getElementById("message").innerHTML = player1Name + " HAS WON!";
                             }else {
                                 document.getElementById("message").innerHTML = player2Name + " HAS WON!";
@@ -77,6 +77,8 @@
 	                player = 1;
 	                document.getElementById("message").innerHTML = "";
 	                resetGameBoard(table);
+	                document.getElementById("txtPlayer1").value = "";
+					document.getElementById("txtPlayer2").value = "";
                 });
                 
                 function checkIfUse(td){
@@ -208,7 +210,9 @@
                 <br />
                 <br />
                 <button type="button" id="btnPlayers" class="btn btn-lg btn-danger btnReset">Reset Game</button>
-                <div id="messageBox"><p id="message"></p></div>
+                <div id="messageBox"><p id="message">To get started, enter the name of the players in the textboxes above.
+	                <br /><br />Then player 1 can start the game.
+                </p></div>
             </div>
 		</div>
 	</body>
