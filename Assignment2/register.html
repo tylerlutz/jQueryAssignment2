@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tyler Lutz - jQuery TicTac Toe</title>
+
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 	crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- jQuery Validate -->
+		<script src="js/jquery.validate.js"></script>
+		
+		<script>
+			$().ready(function(){
+				
+				$("#contactForm").validate();
+/*
+				$("#registrationForm").validate({
+					rules: {
+						firstName: {
+						required: true,
+						minlength: 2
+						},
+						lastName: {
+							required: true
+							minlength: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						password: {
+							required: true,
+							minlength: 6
+						},
+						confirmPassword: {
+							required: true,
+							minlength: 6,
+							equalTo: "password"
+						}
+					},
+					messages: {
+						firstName: {
+							required: "Please enter your first name.",
+							minlength: "Your  first name must be at least 2 characters long."
+						},
+						lastName: {
+							required: "Please enter your last name.",
+							minlength: "Your  last name must be at least 2 characters long."
+						},
+						email: "Please enter a valid email address.",
+						password: {
+							required: "Please provide a password.",
+							minlength: "Your password must be at least 6 characters long."
+						},
+						confirm_password: {
+							required: "Please confirm your password.",
+							minlength: "Your password must be at least 6 characters long.",
+							equalTo: "Please enter the same password as above."
+						}
+					}
+				});
+*/
+			});
+		</script>
+		
+	</head>
+	<body style="background-color:#e8edf3">
+		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">jQuery TicTac Toe</a>
+            </div>
+            <ul class="nav navbar-nav">
+	          <li><a href="index.html">Welcome Page</a>
+              <li><a href="tictac.html">TicTac Toe</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li class="active"><a href="register.html">Registration Form</a></li>
+              <li><a href="contact.html">Contact Form</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <div class="container">
+	        <div class="col-lg-5">
+		        <h2>Registration Form</h2>
+		        <hr />
+		        <form id="contactForm" method="get">
+			        <div class="form-group">
+				        <label>First Name:</label>
+				        <input name="firstName" type="text" minlength="2" required="true" class="form-control">
+			        </div>
+			        <div class="form-group">
+				        <label>Last Name:</label>
+				        <input name="lastName" type="text" minlength="2" required="true" class="form-control">
+			        </div>
+			        <div class="form-group">
+			        	<label>Email Address:</label>
+			        	<input name="email" type="email" required="true" class="form-control">
+			        </div>
+			        <div class="form-group">
+				        <label>Password:</label>
+				        <input name="password" id="password" type="password" class="form-control">
+			        </div>
+			        <div class="form-group">
+				        <label>Confirm Password:</label>
+				        <input name="confirmPassword" id="confirmPassword" type="password" data-rule-equalTo="#password" class="form-control">
+			        </div>
+			        <button type="submit" value="Submit" class="btn btn-lg btn-default">Submit Comment</button>
+			    </form>
+	        </div>
+        </div>
+        
+	</body>
+</html>
